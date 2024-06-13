@@ -7,7 +7,7 @@
  Telegram Bot API for Wolfram Language by [TBpack Ltd.](https://www.tbpack.co.uk/)
 
 ## Installation guide
- - **The recommended option** in Mathematica 12.1+ ``PacletInstall["url"]`` can be used for the installation straight away: [<img align="right" src="https://github.com/vasilsaroka/TelegramBotAPI/blob/master/Pictures/Logo_TBpack.png" alt="TBpack Logo" width="250"/>](https://www.tbpack.co.uk/)
+ - **The recommended option** in Mathematica 12.1+ ``PacletInstall["url"]`` can be used for the installation straight away: [<img align="right" src="https://github.com/vasilsaroka/TelegramBotAPI/blob/main/Pictures/Logo_TBpack.png" alt="TBpack Logo" width="250"/>](https://www.tbpack.co.uk/)
 
 
 
@@ -74,14 +74,15 @@
        ](* end While *)
        ](* end Block *)
    
- - Copy and paste the above function into Wolfram Notebook cell and evaluate it to make the definition of the function known to the current session.
+ - Copy and paste the above function into Wolfram Notebook cell and evaluate it to make the definition of the function known to the current session. [<img align="right" src="https://github.com/vasilsaroka/TelegramBotAPI/blob/main/Pictures/Aminat_Nweke%2BOpenAI.JPG" alt="TBpack Logo" width="250"/>](https://t.me/AminatNweke_tbpack_bot)
+
  - Run the above defined function in a separate Notebook cell:
     
        BotMain[]
 
 Congratulations! Now your bot is active and responsive. To terminate the cell evaluation (that is set to run *infinitely long!*) use `Alt+.`.
 
-More complicated bots including LLMs and functions like `SpeechRecognize` can be developed with a similar structure in mind. See, for example, our conference virtual secretary [Aminat](https://t.me/AminatNweke_tbpack_bot).
+More complicated bots including LLMs and functions like `SpeechRecognize` can be developed with a similar structure in mind. See, for example, our conference virtual secretary [Aminat](https://t.me/AminatNweke_tbpack_bot) 
 
 Put a star to this repository if you think other API functions, such as those used for [Aminat](https://t.me/AminatNweke_tbpack_bot), should be released. 
  
