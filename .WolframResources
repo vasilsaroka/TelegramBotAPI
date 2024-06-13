@@ -1,0 +1,8 @@
+Resources[
+    Version[1],
+    ExecutionBuildCommand["<<TelegramBotAPI`"],
+    Paclet[
+        PacletFolder["TelegramBotAPI"],
+        FunctionPaclet[False]
+    ]
+]
