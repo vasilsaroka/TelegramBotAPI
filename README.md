@@ -82,7 +82,7 @@
 
 Congratulations! Now your bot is active and responsive. To terminate the cell evaluation (that is set to run *infinitely long!*) use `Alt+.`.
 
-More complicated bots including LLMs and functions like `SpeechRecognize` can be developed with a similar structure in mind. See, for example, our conference virtual secretary [Aminat](https://t.me/AminatNweke_tbpack_bot) 
+More complicated bots including LLMs and functions like `SpeechRecognize` can be developed with a similar structure in mind. See, for example, our conference virtual secretary [Aminat](https://t.me/AminatNweke_tbpack_bot).
 
 Put a star to this repository if you think other API functions, such as those used for [Aminat](https://t.me/AminatNweke_tbpack_bot), should be released. 
  
