@@ -61,7 +61,7 @@
     		            (* new update is available; try to get chat id and message text *)
     		            chatId = getChatId[update];
     		            messagetext = getMessageText[update];
-                  (* reply to the message \*)
+                  (* reply to the message *)
     		            Switch[
      				                  messagetext,
      				                  "Hi", sendMessage[chatId, "Hi :)"],
