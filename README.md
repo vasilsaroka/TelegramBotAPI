@@ -3,11 +3,11 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Support TBpack](https://img.shields.io/static/v1?label=support&message=5$&color=green&style=flat&logo=paypal)](https://paypal.me/vasilsaroka?locale.x=en_GB)
 
-# TelegramBotAPI
+# TelegramBotAPI  [<img align="right" src="https://github.com/vasilsaroka/TelegramBotAPI/blob/main/Pictures/Logo_TBpack.png" alt="TBpack Logo" width="125"/>](https://www.tbpack.co.uk/)
  Telegram Bot API for Wolfram Language by [TBpack Ltd.](https://www.tbpack.co.uk/)
 
 ## Installation guide
- - **The recommended option** in Mathematica 12.1+ ``PacletInstall["url"]`` can be used for the installation straight away: [<img align="right" src="https://github.com/vasilsaroka/TelegramBotAPI/blob/main/Pictures/Logo_TBpack.png" alt="TBpack Logo" width="250"/>](https://www.tbpack.co.uk/)
+ - **The recommended option** in Mathematica 12.1+ ``PacletInstall["url"]`` can be used for the installation straight away: 
 
 
 
@@ -74,7 +74,7 @@
        ](* end While *)
        ](* end Block *)
    
- - Copy and paste the above function into Wolfram Notebook cell and evaluate it to make the definition of the function known to the current session. [<img align="right" src="https://github.com/vasilsaroka/TelegramBotAPI/blob/main/Pictures/Aminat_Nweke%2BOpenAI.JPG" alt="TBpack Logo" width="250"/>](https://t.me/AminatNweke_tbpack_bot)
+ - Copy and paste the above function into Wolfram Notebook cell and evaluate it to make the definition of the function known to the current session. [<img align="right" src="https://github.com/vasilsaroka/TelegramBotAPI/blob/main/Pictures/Aminat_Nweke%2BOpenAI.JPG" alt="TBpack Logo" width="210"/>](https://t.me/AminatNweke_tbpack_bot)
 
  - Run the above defined function in a separate Notebook cell:
     
