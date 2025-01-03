@@ -51,11 +51,11 @@
        {
         update, updateId, chatId, messagetext
        },
-       update = Last[getUpdates[]];
+       update = Last[getUpdates[Offset->-1]];
        updateId = Lookup[update, "update_id"];
        While[
    	          True,
-             	update = Last[getUpdates[]];
+             	update = Last[getUpdates[Offset->-1]];
    	          If[
     		            updateId == Lookup[update, "update_id"],
     		            (* new update is available; try to get chat id and message text *)
