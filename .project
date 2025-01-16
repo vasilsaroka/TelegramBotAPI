@@ -14,11 +14,4 @@
 	<natures>
 		<nature>com.wolfram.eclipse.MEET.SimpleMathematicaNature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>TelegramBotAPI_2024_01_06.nb</name>
-			<type>1</type>
-			<location>D:/Google Drive/Data Part2/Work/Business/TBpack startup/Conference Program Bot/Promotions/QLIN 9-14 Jan 2024/TelegramBotAPI_2024_01_06.nb</location>
-		</link>
-	</linkedResources>
 </projectDescription>

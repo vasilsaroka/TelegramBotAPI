@@ -1,6 +1,10 @@
 (* Wolfram Language Package *)
 
 BeginPackage["TelegramBotAPI`GettingUpdates`"]
+
+Unprotect[Evaluate[$Context<>"*"]];
+
+
 (* Exported symbols added here with SymbolName::usage *)  
 
 getUpdates::usage = "getUpdates[] returns a list of updates from the bot specified by \!\(\*StyleBox[\"$BotToken\",\"TI\"]\).
@@ -9,7 +13,8 @@ getUpdates[\!\(\*RowBox[{\"Offset\", \"\[Rule]\", StyleBox[\"value\",\"TI\"]}]\)
 getUpdates[\!\(\*RowBox[{\"Limit\", \"\[Rule]\", StyleBox[\"value\",\"TI\"]}]\)] returns a list of updates from the given bot with the set Limit.
 getUpdates[\!\(\*RowBox[{\"Timeout\", \"\[Rule]\", StyleBox[\"value\",\"TI\"]}]\)] returns a list of updates from the given bot with the set Timeout.
 getUpdates[\!\(\*RowBox[{\"AllowedUpdates\", \"\[Rule]\", StyleBox[\"type\",\"TI\"]}]\)] returns a list of updates of the specified \!\(\*StyleBox[\"type\",\"TI\"]\).
-getUpdates[\!\(\*RowBox[{\"\\\"BotToken''\", \"\[Rule]\", StyleBox[\"bottoken\",\"TI\"]}]\)] returns a list of updates for the bot specified by \!\(\*StyleBox[\"bottoken\",\"TI\"]\).";
+getUpdates[\!\(\*RowBox[{\"\\\"BotToken''\", \"\[Rule]\", StyleBox[\"bottoken\",\"TI\"]}]\)] returns a list of updates for the bot specified by \!\(\*StyleBox[\"bottoken\",\"TI\"]\); default is an empty \!\(\*StyleBox[\"$BotToken\",\"TI\"]\) constant that can be set to a desired value to avoid using this option every time.
+\!\(\*TemplateBox[{\"Read on Telegram Bot API webpage\", \"https://core.telegram.org/bots/api#getupdates\"}, \"HyperlinkURL\"]\)";
 
 
 (* Options *)
@@ -27,36 +32,28 @@ Options[getUpdates] = {
    Limit -> 100,
    Timeout -> 0,
    AllowedUpdates -> ""(* JSON-serialized list*),
-   "BotToken"-> TelegramBotAPI`$BotToken
+   "BotToken" -> TelegramBotAPI`$BotToken
    };
 getUpdates[OptionsPattern[]] := Block[
    {
-    offset = OptionValue[Offset],
-    limit = OptionValue[Limit],
-    timeout = OptionValue[Timeout],
-    allowedupdates = OptionValue[AllowedUpdates],
-    bottoken = OptionValue["BotToken"],
     apiurl, assoc,
     request, result
     },
-   apiurl = 
-    URL[StringJoin[TelegramBotAPI`$TelegramURL, "bot", bottoken, "/", "getUpdates"]];
+   apiurl = URL[StringJoin[TelegramBotAPI`$TelegramURL, "bot", OptionValue["BotToken"], "/", "getUpdates"]];
    
    assoc = Association[
      Method -> "GET",
-     "ContentType" -> Automatic(* application/x-www-form-urlencoded; 
+     "ContentType" -> "application/json" (*  Automatic *)(* application/x-www-form-urlencoded; 
      application/json (except for uploading files);
      multipart/form-data (use to upload files); URL query string*),
      "Body" -> {
-       "offset" -> offset,
-       "limit" -> limit,
-       "timeout" -> timeout,
-       "allowed_updates" -> allowedupdates
+       "offset" -> OptionValue[Offset],
+       "limit" -> OptionValue[Limit],
+       "timeout" -> OptionValue[Timeout],
+       "allowed_updates" -> OptionValue[AllowedUpdates]
        }];
    
-   request = 
-    Check[URLExecute[HTTPRequest[apiurl, assoc], 
-      "JSON"], {"ok" -> False}];
+   request = Check[URLExecute[HTTPRequest[apiurl, assoc], "JSON"], {"ok" -> False}];
    If[
     	Lookup[request, "ok"],
     	result = Lookup[request, "result"];	
@@ -69,5 +66,7 @@ SyntaxInformation[getUpdates] = {"ArgumentsPattern" -> {OptionsPattern[]}};
 
 
 End[] (* End Private Context *)
+
+(Attributes[#] = {Protected, ReadProtected}) & /@ Names[Evaluate[$Context<>"*"]]
 
 EndPackage[]

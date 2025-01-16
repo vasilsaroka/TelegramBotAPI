@@ -1,10 +1,10 @@
 (* Paclet Info File *)
 
-(* created 2024/06/13*)
+(* created 2025/01/16*)
 
 Paclet[
     Name -> "TelegramBotAPI",
-    Version -> "0.1.0",
+    Version -> "0.2.0",
     MathematicaVersion -> "10.0+",
     Description -> "Telegram Bot API for Wolfram Language",
     Creator -> "Vasil Saroka <40.ovasil@gmail.com>",
@@ -23,7 +23,7 @@ Paclet[
     URL -> "https://github.com/vasilsaroka/TelegramBotAPI",
     Location -> "https://github.com/vasilsaroka/TelegramBotAPI",
     Support -> "https://t.me/vasilsaroka",
-    UUID -> "TelegramBotAPI-3d5c6cae-ef0c-46e6-92e3-cc413a15ba1b",
+    UUID -> "TelegramBotAPI-4d202827-c2d9-4565-b673-6acbcf16658d",
     Extensions -> 
         {
             {"Kernel", Context -> "TelegramBotAPI`"}

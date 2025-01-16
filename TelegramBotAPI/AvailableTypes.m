@@ -1,8 +1,13 @@
 (* Wolfram Language Package *)
 
 BeginPackage["TelegramBotAPI`AvailableTypes`"]
+
+Unprotect[Evaluate[$Context<>"*"]];
+
+
 (* Exported symbols added here with SymbolName::usage *)
-InlineKeyboardMarkup::usage = "InlineKeyboardMarkup[\!\(\*RowBox[{StyleBox[\"arrayofojbects\",\"TI\"]}]\)] represents array of button rows, each represented by an array of \!\(\*StyleBox[\"InlineKeyboardButton\",\"TI\"]\) objects.";
+InlineKeyboardMarkup::usage = "InlineKeyboardMarkup[\!\(\*RowBox[{StyleBox[\"arrayofojbects\",\"TI\"]}]\)] represents array of button rows, each represented by an array of \!\(\*StyleBox[\"InlineKeyboardButton\",\"TI\"]\) objects.
+\!\(\*TemplateBox[{\"Read on Telegram Bot API webpage\", \"https://core.telegram.org/bots/api#inlinekeyboardmarkup\"}, \"HyperlinkURL\"]\)";
 InlineKeyboardButton::usage = "InlineKeyboardButton[\!\(\*RowBox[{StyleBox[\"text\",\"TI\"]}]\)] is an object representing one button of an inline keyboard. It must use exactly one of the optional fields.
 InlineKeyboardButton[\!\(\*RowBox[{StyleBox[\"text\",\"TI\"], \",\" , StyleBox[\"options\",\"TI\"]}]\)] is a button of an inline keyboard with specified \!\(\*StyleBox[\"options\",\"TI\"]\).
 InlineKeyboardButton[\!\(\*RowBox[{StyleBox[\"text\",\"TI\"], \",\" ,\"URL\", \"\[Rule]\", StyleBox[\"url\",\"TI\"]}]\)] is a button with specified HTTP or tg:// \!\(\*StyleBox[\"url\",\"TI\"]\) to be opened when the button is pressed; for instance, tg://user?id=<user_id> if allowed by user's privacy settings.
@@ -13,7 +18,8 @@ InlineKeyboardButton[\!\(\*RowBox[{StyleBox[\"text\",\"TI\"], \",\" ,\"SwitchInl
 InlineKeyboardButton[\!\(\*RowBox[{StyleBox[\"text\",\"TI\"], \",\" ,\"SwitchInlineQueryCurrentChat\", \"\[Rule]\", StyleBox[\"string\",\"TI\"]}]\)] is a button inserting bot's name together with \!\(\*StyleBox[\"string\",\"TI\"]\) inline query in the input field of the current chat.
 InlineKeyboardButton[\!\(\*RowBox[{StyleBox[\"text\",\"TI\"], \",\" ,\"SwitchInlineQueryChosenChat\", \"\[Rule]\", StyleBox[\"SwitchInlineQueryChosenChat\",\"TI\"]}]\)] is a button prompting the user to select one of their chats of the type specified in \!\(\*StyleBox[\"SwitchInlineQueryChosenChat\",\"TI\"]\) object.
 InlineKeyboardButton[\!\(\*RowBox[{StyleBox[\"text\",\"TI\"], \",\" ,\"CallbackGame\", \"\[Rule]\", StyleBox[\"CallbackGame\",\"TI\"]}]\)] is a button launching the game described in \!\(\*StyleBox[\"CallbackGame\",\"TI\"]\) object.
-InlineKeyboardButton[\!\(\*RowBox[{StyleBox[\"text\",\"TI\"], \",\" ,\"Pay\", \"\[Rule]\", StyleBox[\"True\",\"TI\"]}]\)] is a button representing a Pay button.";
+InlineKeyboardButton[\!\(\*RowBox[{StyleBox[\"text\",\"TI\"], \",\" ,\"Pay\", \"\[Rule]\", StyleBox[\"True\",\"TI\"]}]\)] is a button representing a Pay button.
+\!\(\*TemplateBox[{\"Read on Telegram Bot API webpage\", \"https://core.telegram.org/bots/api#inlinekeyboardbutton\"}, \"HyperlinkURL\"]\)";
 
 
 (* Options *)
@@ -45,42 +51,34 @@ Options[InlineKeyboardButton] = {
    Pay -> False
    };
 (* warnings *)
-InlineKeyboardButton::bytelim = 
+InlineKeyboardButton::warn = 
   "The CallbackData string size `1` is too large. It must be limited to 1-64 bytes. In Mathematica the string size determined by ByteCount can be `2` bytes.";
 InlineKeyboardButton[text_?StringQ,OptionsPattern[]] := Block[
-   {
-    url = OptionValue[URL],
-    callbackdata = OptionValue[CallbackData],
-    webapp = OptionValue[WebApp],
-    loginurl = OptionValue[LoginURL],
-    switchinlinequery = OptionValue[SwitchInlineQuery],
-    switchinlinequerycurrentchat = OptionValue[SwitchInlineQueryCurrentChat],
-    switchinlinequerychosenchat = OptionValue[SwitchInlineQueryChosenChat],
-    callbackgame = OptionValue[CallbackGame],
-    pay = OptionValue[Pay],
-    
+   { 
     callbackdatabytesize,
     callbackdatabytelimit = 88
     },
-   callbackdatabytesize = ByteCount[callbackdata];
+   callbackdatabytesize = ByteCount[OptionValue[CallbackData]];
    If[callbackdatabytesize > callbackdatabytelimit, 
-    Message[InlineKeyboardButton::bytelim, callbackdatabytesize, 
+    Message[InlineKeyboardButton::warn, callbackdatabytesize, 
      callbackdatabytelimit]];
    {
     "text" -> text,
-    "url" -> url,
-    "callback_data" -> callbackdata,
-    "web_app" -> webapp, 
-    "login_url" -> loginurl,
-    "switch_inline_query" -> switchinlinequery, 
-    "switch_inline_query_current_chat" -> switchinlinequerycurrentchat,
-    "switch_inline_query_chosen_chat" -> switchinlinequerychosenchat,
-    "callback_game" -> callbackgame,
-    "pay" -> pay
+    "url" -> OptionValue[URL],
+    "callback_data" -> OptionValue[CallbackData],
+    "web_app" -> OptionValue[WebApp], 
+    "login_url" -> OptionValue[LoginURL],
+    "switch_inline_query" -> OptionValue[SwitchInlineQuery], 
+    "switch_inline_query_current_chat" -> OptionValue[SwitchInlineQueryCurrentChat],
+    "switch_inline_query_chosen_chat" -> OptionValue[SwitchInlineQueryChosenChat],
+    "callback_game" -> OptionValue[CallbackGame],
+    "pay" -> OptionValue[Pay]
     }
    ](* end Block *);
 SyntaxInformation[InlineKeyboardButton] = {"ArgumentsPattern" -> {_,OptionsPattern[]}};
 
 End[] (* End Private Context *)
+
+(Attributes[#] = {Protected, ReadProtected}) & /@ Names[Evaluate[$Context<>"*"]]
 
 EndPackage[]
