@@ -179,9 +179,9 @@ More complicated bots including LLMs and functions like `SpeechRecognize` can be
 
    ### WLJS Notebook Demo
    - Evaluate ``Needs[TelegramBotAPI`]`` to load TelegramBotAPI into the Wolfram Engine session run in Electron application.
-   - Test TelegramBotAPI trying, for example, ElevenLabs API `textToSpeechXI`:
+   - Test TelegramBotAPI trying, for example, ElevenLabs API subpackage function `textToSpeechXI`:
+![WLJS_notebook_ElevenLabs_zoom](https://github.com/user-attachments/assets/5208c523-9fb2-4fc0-ad94-ab5a72a7f048)
 
-![WLJS_notebook_ElevenLabspng](https://github.com/user-attachments/assets/f6924e51-3b3e-4d72-bc31-ba29c4560371)
 
 ## Supporting the project
    We believe that everyone deserves access to reliable, science-based knowledge. That's why we keep our code open and accessible to all, no matter their location or financial situation. By doing this, we empower more people to educate themselves and contribute to global wellbeing. Unlike major corporations, we are not backed by billionaire owners; our work is entirely powered by your generosity. Your donations are essential in keeping our project open and available to everyone. Every contribution, no matter the size, has a significant impact on the future of TBpack. If our work has benefited you, please consider [making a donation](https://paypal.me/vasilsaroka?locale.x=en_GB). Together, we can make a difference. 
