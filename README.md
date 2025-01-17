@@ -100,7 +100,7 @@ More complicated bots including LLMs and functions like `SpeechRecognize` can be
            {
               method=OptionValue[Method],
               pacletsrepository, pacletdirectory, message1, message2, jsonreleases, info, pos, url, message, tempfile, 
-              version = "v0.2.1" (* special TelegramBotAPI patch for Electron *),
+              version = "v0.2.0" (* TelegramBotAPI version *),
               giturl = "https://api.github.com/repos/vasilsaroka/TelegramBotAPI/releases",
               deletedirectory
            },
@@ -137,7 +137,7 @@ More complicated bots including LLMs and functions like `SpeechRecognize` can be
                        info = "Looking for TelegramBotAPI " <> version;
                        Print[info <> "..."];
                        pos=Position[Lookup[jsonreleases, "tag_name"],version][[1,1]];
-                       url=First@Lookup[Lookup[jsonreleases, "assets"][[pos]],"browser_download_url"];
+                       url=Last@Lookup[Lookup[jsonreleases, "assets"][[pos]],"browser_download_url"];
                        If[
                           $VersionNumber >= 14.0,
                           tempfile = FileNameJoin[{$TemporaryDirectory,FileNameTake[url]}];
