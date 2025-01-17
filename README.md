@@ -44,7 +44,7 @@
    
  Congratulations! You have just implemented the basic bot response loop! Now we can try to run it infinitely long by using available programming loops.
  ### Running the basic response loop
- - A simple function for running basic response loop can be defined as follows:
+ - A simple function for running basic response loop can be defined as follows (N.B. may not work if you have not sent a message to the bot before running it):
 
        Clear[BotMain];
        BotMain[] := Block[
@@ -87,7 +87,7 @@ More complicated bots including LLMs and functions like `SpeechRecognize` can be
 ## WLJS Notebooks - Electron application
    The [Electron application](https://github.com/JerryI/wolfram-js-frontend/releases) is an open-source javascript-based cross-platform graphical user interface for running Wolfram Language code via a [Wolfram Engine](https://www.wolfram.com/engine/). It is an actively developed [project](https://github.com/JerryI/wolfram-js-frontend) that is getting popularity due to its simplicity and ability to combine Wolfram Language with Javescript and Markdown. While WLJS notebooks are not superior to the original Mathematica notebooks, they do have some features such as gpt-based copilot, powerful command palette system, and enhanced animation capbilitites that may transform them into a useful companion if not a real contender of original notebooks. 
    
-   We plan to release whenever possible special patches tagged as vX.Y.1, where 'X' and 'Y' are any integers, of TelegramBotAPI that can be installed into the Electron application.  
+   We plan to release whenever possible special patches tagged as vX.Y.1, where 'X' and 'Y' are some integers, of TelegramBotAPI that can be installed into the Electron application.  
    ### Installation guide
    - Install [Wolfram Engine](https://www.wolfram.com/engine/) (14.0 or higher)
    - Install [Electron application](https://jerryi.github.io/wljs-docs/) (2.5.6 or higher)
