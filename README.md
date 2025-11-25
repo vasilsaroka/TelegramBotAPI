@@ -4,7 +4,7 @@
 [![Support TBpack](https://img.shields.io/static/v1?label=support&message=5$&color=green&style=flat&logo=paypal)](https://paypal.me/vasilsaroka?locale.x=en_GB)
 
 # TelegramBotAPI  [<img align="right" src="https://github.com/vasilsaroka/TelegramBotAPI/blob/main/Pictures/Logo_TBpack.png" alt="TBpack Logo" width="125"/>](https://www.tbpack.co.uk/)
- Telegram Bot API for Wolfram Language by [TBpack Ltd.](https://www.tbpack.co.uk/)
+ Telegram Bot API for Wolfram Language
 
 ## Installation guide
  - **The recommended option** in Mathematica 12.1+ ``PacletInstall["url"]`` can be used for the installation straight away: 
@@ -74,7 +74,7 @@
        ](* end While *)
        ](* end Block *)
    
- - Copy and paste the above function into Wolfram Notebook cell and evaluate it to make the definition of the function known to the current session. [<img align="right" src="https://github.com/vasilsaroka/TelegramBotAPI/blob/main/Pictures/Aminat_Nweke%2BOpenAI.JPG" alt="TBpack Logo" width="210"/>](https://t.me/AminatNweke_tbpack_bot)
+ - Copy and paste the above function into Wolfram Notebook cell and evaluate it to make the definition of the function known to the current session. <img align="right" src="https://github.com/vasilsaroka/TelegramBotAPI/blob/main/Pictures/Aminat_Nweke%2BOpenAI.JPG" alt="TBpack Logo" width="210"/>
 
  - Run the above defined function in a separate Notebook cell:
     
@@ -82,7 +82,7 @@
 
 Congratulations! Now your bot is active and responsive. To terminate the cell evaluation (that is set to run *infinitely long!*) use `Alt+.`.
 
-More complicated bots including LLMs and functions like `SpeechRecognize` can be developed with a similar structure in mind. See, for example, our conference virtual secretary [Aminat](https://t.me/AminatNweke_tbpack_bot).
+More complicated bots including LLMs and functions like `SpeechRecognize` can be developed with a similar structure in mind. Try to make a friendly and ameable AI agent as in the picture to the right.
 
 ## WLJS Notebooks - Electron application
    The [Electron application](https://github.com/JerryI/wolfram-js-frontend/releases) is an open-source javascript-based cross-platform graphical user interface for running Wolfram Language code via a [Wolfram Engine](https://www.wolfram.com/engine/). It is an actively developed [project](https://github.com/JerryI/wolfram-js-frontend) that is getting popularity due to its simplicity and ability to combine Wolfram Language with Javescript and Markdown. While WLJS notebooks are not superior to the original Mathematica notebooks, they do have some features such as gpt-based copilot, powerful command palette system, and enhanced animation capbilitites that may transform them into a useful companion if not a real contender of original notebooks. 
