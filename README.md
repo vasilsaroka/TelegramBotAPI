@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Support TBpack](https://img.shields.io/static/v1?label=support&message=5$&color=green&style=flat&logo=paypal)](https://paypal.me/vasilsaroka?locale.x=en_GB)
 
-# TelegramBotAPI  [<img align="right" src="https://github.com/vasilsaroka/TelegramBotAPI/blob/main/Pictures/Logo_TBpack.png" alt="TBpack Logo" width="125"/>](https://www.tbpack.co.uk/)
+# TelegramBotAPI  [<img align="right" src="https://github.com/vasilsaroka/TelegramBotAPI/blob/main/Pictures/Logo_TBpack.png" alt="TBpack Logo" width="125"/>]([https://www.tbpack.co.uk/](https://sites.google.com/view/vasilsaroka/home))
  Telegram Bot API for Wolfram Language
 
 ## Installation guide
@@ -165,7 +165,7 @@ More complicated bots including LLMs and functions like `SpeechRecognize` can be
 
       **Note:** After successful installation, you will have to restart Electron application to make TelegramBotAPI visible for ``Needs["TelegramBotAPI`"]``.
 
-     To uninstall the installed TBpack version, evaluate
+     To uninstall the installed TelegramBotAPI version, evaluate
 
          InstallTelegramBotAPI4Electron[Mehtod->"Uninstall"]
 
@@ -184,4 +184,4 @@ More complicated bots including LLMs and functions like `SpeechRecognize` can be
 
 
 ## Supporting the project
-   We believe that everyone deserves access to reliable, science-based knowledge. That's why we keep our code open and accessible to all, no matter their location or financial situation. By doing this, we empower more people to educate themselves and contribute to global wellbeing. Unlike major corporations, we are not backed by billionaire owners; our work is entirely powered by your generosity. Your donations are essential in keeping our project open and available to everyone. Every contribution, no matter the size, has a significant impact on the future of TBpack. If our work has benefited you, please consider [making a donation](https://paypal.me/vasilsaroka?locale.x=en_GB). Together, we can make a difference. 
+   We believe that everyone deserves access to reliable, science-based knowledge. That's why we keep our code open and accessible to all, no matter their location or financial situation. By doing this, we empower more people to educate themselves and contribute to global wellbeing. Unlike major corporations, we are not backed by billionaire owners; our work is entirely powered by your generosity. Your donations are essential in keeping our project open and available to everyone. Every contribution, no matter the size, has a significant impact on our future. If our work has benefited you, please consider [making a donation](https://paypal.me/vasilsaroka?locale.x=en_GB). Together, we can make a difference. 
